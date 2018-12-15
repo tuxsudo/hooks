@@ -1,7 +1,13 @@
 import { useState, useEffect, useRef, MutableRefObject } from "react";
 import ResizeObserver from "resize-observer-polyfill";
 
-export default function useResize(): {
+export interface ResizeHandler {
+  (entry: ResizeObserverEntry): void;
+}
+
+export default function useResize({
+  onResize
+}: { onResize?: ResizeHandler } = {}): {
   entry: ResizeObserverEntry | null;
   ref: MutableRefObject<any>;
 } {
@@ -10,6 +16,9 @@ export default function useResize(): {
 
   const handleResize = ([entry]) => {
     setEntry(entry);
+    if (onResize) {
+      onResize(entry);
+    }
   };
 
   const observer = useRef(new ResizeObserver(handleResize));

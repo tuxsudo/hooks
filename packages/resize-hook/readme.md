@@ -4,12 +4,8 @@
 import useResize from "@tuxsudo/resize-hook";
 
 export function Elm() {
-  const { ref, entry } = useResize();
+  const { ref, entry } = useResize({ onResize: console.log });
 
-  return (
-    <div ref={ref}>
-      {entry && <span>{entry.contentRect.width}</span>}
-    </div>
-  );
+  return <div ref={ref}>{entry && <span>{entry.contentRect.width}</span>}</div>;
 }
 ```

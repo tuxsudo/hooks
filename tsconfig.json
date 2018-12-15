@@ -3,6 +3,7 @@
     "target": "es2015",
     "moduleResolution": "node",
     "jsx": "react",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    // "declaration": true
   }
 }

@@ -4,8 +4,10 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "ncc build -e react -e styled-components src/index.tsx",
-    "storybook": "start-storybook -p 6006 -c .storybook"
+    "build": "ncc build -e react src/index.tsx",
+    "prestorybook": "shx rm -rf \"../../node_modules/@storybook/react/node_modules/react*\"",
+    "storybook": "start-storybook -p 6006 -c .storybook",
+    "clean": "shx rm -rf dist"
   },
   "peerDependencies": {
     "react": "^16.7.0-alpha.2",
