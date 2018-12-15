@@ -1,0 +1,17 @@
+{
+  "name": "@tuxsudo/resize-hook",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build -e react -e styled-components src/index.tsx",
+    "storybook": "start-storybook -p 6006 -c .storybook"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2"
+  },
+  "dependencies": {
+    "resize-observer-polyfill": "^1.5.1"
+  }
+}

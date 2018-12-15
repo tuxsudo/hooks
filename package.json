@@ -1,0 +1,35 @@
+{
+  "name": "react-hooks",
+  "version": "1.0.0",
+  "bolt": {
+    "workspaces": [
+      "packages/*"
+    ]
+  },
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "resize-observer-polyfill": "^1.5.1",
+    "styled-components": "^4.1.2"
+  },
+  "devDependencies": {
+    "@storybook/core": "^4.1.1",
+    "@storybook/react": "^4.1.1",
+    "@types/react": "16.7",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-eslint": "^10.0.1",
+    "bolt": "^0.22.5",
+    "eslint": "^5.10.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "ncc": "^0.3.6",
+    "prettier": "^1.15.3",
+    "react-hot-loader": "^4.6.0",
+    "typescript": "^3.2.2",
+    "typescript-eslint-parser": "^21.0.2"
+  }
+}
